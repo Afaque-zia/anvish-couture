@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ec">
+  <meta name="description" content="Discover thoughtfully selected sarees, suits and occasion wear at Anvish Couture.">
+  <title>Anvish Couture | Timeless Style For Every You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span>✦ &nbsp; Free shipping on orders above ₹1,999</span>
+    <span class="announcement-divider"></span>
+    <span>Exclusive offers</span>
+    <span class="announcement-divider"></span>
+    <span>Elegance in every stitch &nbsp; ✦</span>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Anvish Couture home">
+      <img src="assets/images/logo/logo.png" alt="Anvish Couture">
+    </a>
+    <button class="icon-button menu-toggle" aria-label="Open menu" aria-expanded="false" data-menu-toggle><span class="menu-glyph">☰</span></button>
+    <nav class="main-nav" aria-label="Main navigation" data-nav>
+      <a href="#home" data-nav-link="home">Home</a>
+      <a href="#shop" data-nav-link="shop">New Arrivals</a>
+      <a href="#category/sarees" data-nav-link="category">Collections <span class="chevron">⌄</span></a>
+      <a href="#about" data-nav-link="about">About Us</a>
+      <a href="#contact" data-nav-link="contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" aria-label="Search" data-search-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.5 4.5"></path></svg></button>
+      <a class="icon-button account-link" href="#contact" aria-label="Account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"></circle><path d="M5.2 20c.4-3.5 3.1-5.5 6.8-5.5s6.4 2 6.8 5.5"></path></svg></a>
+      <button class="icon-button cart-trigger" aria-label="Open shopping bag" data-cart-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l1.1 12H4.4L5.5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg><span class="cart-count" data-cart-count>0</span></button>
+    </div>
+    <form class="search-bar" data-search-form role="search"><input name="q" type="search" placeholder="Search sarees, suits, fabrics..." aria-label="Search products"><button class="button button-small" type="submit">Search</button></form>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <footer class="site-footer">
+    <div class="footer-benefits">
+      <div><span class="benefit-icon">♧</span><span><strong>Free Shipping</strong><small>On orders above ₹1,999</small></span></div>
+      <div><span class="benefit-icon">♢</span><span><strong>Secure Payments</strong><small>100% safe &amp; trusted</small></span></div>
+      <div><span class="benefit-icon">◇</span><span><strong>Easy Returns</strong><small>Hassle-free returns</small></span></div>
+      <div><span class="benefit-icon">♡</span><span><strong>Premium Quality</strong><small>Crafted with care</small></span></div>
+    </div>
+    <div class="footer-main">
+      <a class="footer-brand" href="#home"><img src="assets/images/logo/logo.png" alt="Anvish Couture"></a>
+      <div class="footer-column"><strong>Quick Links</strong><a href="#home">Home</a><a href="#shop">New Arrivals</a><a href="#category/sarees">Collections</a><a href="#contact">Contact</a></div>
+      <div class="footer-column"><strong>Customer Care</strong><a href="#contact">Shipping Policy</a><a href="#contact">Returns &amp; Refunds</a><a href="#contact">Size Guide</a><a href="#contact">Track Order</a></div>
+      <div class="footer-newsletter"><strong>Stay Connected</strong><p>Be the first to know about our latest collections.</p><form data-newsletter><label class="visually-hidden" for="newsletter-email">Your email address</label><input id="newsletter-email" type="email" placeholder="Your email address" required><button aria-label="Subscribe">→</button></form><span class="social-links">◎ &nbsp; f &nbsp; ▶ &nbsp; ♡</span></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Anvish Couture. All rights reserved.</span><span>Style. Grace. You.</span></div>
+  </footer>
+
+  <div class="overlay" data-overlay hidden></div>
+  <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" data-cart-drawer aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow">YOUR SELECTION</span><h2 id="cart-title">Shopping Bag <span data-drawer-count>(0)</span></h2></div><button class="icon-button close-drawer" aria-label="Close shopping bag" data-cart-close>×</button></div>
+    <div class="drawer-items" data-drawer-items></div>
+    <div class="drawer-footer" data-drawer-footer></div>
+  </aside>
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>
