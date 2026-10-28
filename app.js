@@ -90,7 +90,7 @@ function homePage() {
   return `<div class="page-shell">
     <section class="hero"><div class="hero-copy"><span class="eyebrow">THE NEW ETHNIC COLLECTION</span><h1>Elegance in<br><em>Every Thread</em></h1><p>Discover timeless suits, graceful sarees and thoughtfully selected styles made for every occasion.</p><a class="button" href="#shop">Explore collection &nbsp; →</a></div><div class="hero-note">Grace<br>in Every<br><span>Look</span></div></section>
     <section class="home-categories container"><div class="section-heading"><div class="heading-rule">SHOP BY CATEGORY</div><h2>Find Your Perfect Style</h2></div><div class="category-tiles">${categories}</div></section>
-    <section class="featured-section"><div class="container"><div class="section-topline"><div class="section-heading"><div class="heading-rule">HANDPICKED WITH LOVE</div><h2>Featured Collection</h2><p>Discover our most loved styles</p></div><a class="button button-outline button-small" href="#shop">View all &nbsp; →</a></div>${productGrid(products.slice(0, 4))}</div></section>
+    <section class="featured-section"><div class="container"><div class="section-topline"><div class="section-heading"><div class="heading-rule">HANDPICKED WITH LOVE</div><h2>Featured Collection</h2><p>Discover our most loved styles</p></div><a class="button button-outline button-small" href="#shop">View all &nbsp; →</a></div>${productGrid(products.slice(0, 5))}</div></section>
   </div>`;
 }
 

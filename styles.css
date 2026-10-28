@@ -27,16 +27,16 @@ img { display: block; max-width: 100%; }
 
 .announcement { min-height: 28px; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 5px 16px; background: #f1e8dc; color: #605447; font-family: var(--serif); font-size: 13px; letter-spacing: .2px; }
 .announcement-divider { height: 12px; width: 1px; background: #c9b99f; }
-.site-header { position: sticky; z-index: 20; top: 0; display: flex; align-items: center; gap: clamp(12px, 1.8vw, 26px); min-height: 77px; padding: 8px max(3.5vw, calc((100vw - var(--content)) / 2)); background: rgba(251, 248, 242, .97); border-bottom: 1px solid rgba(167, 134, 76, .12); backdrop-filter: blur(12px); }
+.site-header { position: sticky; z-index: 20; top: 0; display: flex; align-items: center; gap: clamp(12px, 1.8vw, 26px); min-height: 77px; padding: 8px clamp(24px, 4vw, 64px); background: rgba(251, 248, 242, .97); border-bottom: 1px solid rgba(167, 134, 76, .12); backdrop-filter: blur(12px); }
 .brand { flex: 0 0 clamp(190px, 18vw, 250px); }
 .brand img { width: 100%; height: clamp(54px, 5.2vw, 66px); object-fit: contain; }
 .main-nav, .header-actions { display: flex; align-items: center; }
-.main-nav { flex: 1; justify-content: space-between; gap: clamp(12px, 1.7vw, 24px); height: 100%; }
+.main-nav { flex: 0 1 auto; justify-content: flex-start; gap: clamp(14px, 1.6vw, 22px); height: 100%; margin-left: auto; }
 .main-nav a { position: relative; display: flex; align-items: center; gap: 5px; height: 58px; color: #37312b; font-size: clamp(13px, .95vw, 14px); transition: color .2s ease; }
 .main-nav a:hover, .main-nav a.active { color: var(--blush-dark); }
 .main-nav a.active::after { position: absolute; bottom: 11px; left: 0; width: 100%; height: 1px; background: var(--gold); content: ""; }
 .chevron { color: var(--gold); font-size: 14px; }
-.header-actions { flex: 0 0 auto; gap: clamp(6px, .9vw, 13px); }
+.header-actions { flex: 0 0 auto; gap: clamp(6px, .9vw, 13px); margin-left: clamp(10px, 1.5vw, 22px); }
 .icon-button { position: relative; display: inline-grid; place-items: center; width: clamp(30px, 2.7vw, 36px); height: 38px; border: 0; background: transparent; cursor: pointer; }
 .icon-button svg { width: clamp(19px, 1.75vw, 23px); height: clamp(19px, 1.75vw, 23px); fill: none; stroke: currentColor; stroke-width: 1.45; stroke-linecap: round; stroke-linejoin: round; }
 .cart-count { position: absolute; top: 1px; right: 0; display: grid; min-width: 16px; height: 16px; padding: 0 3px; place-items: center; border-radius: 50%; background: var(--blush-dark); color: white; font-size: 9px; }
@@ -83,6 +83,9 @@ img { display: block; max-width: 100%; }
 .section-topline .heading-rule::after { display: none; }
 .section-topline .section-heading h2 { font-size: 35px; }
 .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 19px; }
+@media (min-width: 1024px) {
+  .featured-section .product-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
 .product-card { min-width: 0; border: 1px solid #e8dfd3; background: #fbf8f3; }
 .product-photo { position: relative; display: block; overflow: hidden; background: var(--cream); }
 .product-photo img { width: 100%; aspect-ratio: .82; object-fit: cover; transition: transform .45s ease; }
@@ -265,11 +268,11 @@ body.drawer-open { overflow: hidden; }
   .menu-toggle { display: inline-grid; order: -1; width: 30px; }
   .brand { flex: 1; }
   .brand img { width: min(170px, 100%); height: 49px; margin-inline: auto; }
-  .main-nav { position: absolute; top: calc(100% + 1px); left: 0; display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 18px 14px; border-bottom: 1px solid var(--line); background: var(--paper); box-shadow: 0 12px 18px #3a2a1b12; }
+  .main-nav { position: absolute; top: calc(100% + 1px); left: 0; display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; margin-left: 0; padding: 8px 18px 14px; border-bottom: 1px solid var(--line); background: var(--paper); box-shadow: 0 12px 18px #3a2a1b12; }
   .main-nav.open { display: flex; }
   .main-nav a { height: 44px; border-bottom: 1px solid #eee8df; font-size: 14px; }
   .main-nav a.active::after { right: 0; bottom: 0; left: auto; width: 3px; height: 22px; }
-  .header-actions { gap: 2px; }
+  .header-actions { gap: 2px; margin-left: 0; }
   .header-actions .icon-button { width: 29px; }
   .header-actions svg { width: 17px; height: 17px; }
   .account-link { display: none; }
